@@ -66,6 +66,8 @@ export default function HomePage() {
           <p style={{ fontSize: 20, margin: '0 0 10px' }}>Company - Two Of A Kind </p>
           <Link
             href="https://www.twoofakind.agency"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: 'inline-block',
               fontSize: 20,
