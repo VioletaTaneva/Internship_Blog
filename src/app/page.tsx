@@ -48,13 +48,49 @@ export default function HomePage() {
 
   return (
     <div style={{ maxWidth: 800, margin: '40px auto', fontFamily: 'Arial, sans-serif' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+      {/* Profile Section */}
+      <section style={{ display: 'flex', alignItems: 'center', gap: 40, marginBottom: 30 }}>
+        <img
+          src="TOAK-VIOLETA.jpg"
+          alt="Profile"
+          style={{
+            width: 240,
+            height: 240,
+            borderRadius: '50%',
+            objectFit: 'cover',
+          }}
+        />
+        <div style={{ flex: 1 }}>
+          <h1 style={{ fontSize: 42, margin: '0 0 10px' }}>Violeta Taneva </h1>
+          <p style={{ fontSize: 20, margin: '0 0 10px' }}>Company - Two Of A Kind </p>
+          <Link
+            href="https://www.twoofakind.agency"
+            style={{
+              display: 'inline-block',
+              fontSize: 20,
+              padding: '6px 12px',
+              backgroundColor: '#0070f3',
+              color: '#fff',
+              borderRadius: 4,
+              textDecoration: 'none',
+            }}
+          >
+            Visit Website
+          </Link>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <hr style={{ border: '1px solid #eee', margin: '30px 0' }} />
+
+      {/* Blog Header */}
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
         <h1>Blog</h1>
-        <nav>
-          {admin && <Link href="/write">Write</Link>}
-        </nav>
+        <nav>{admin && <Link href="/write">Write</Link>}</nav>
       </header>
 
+      {/* Blog Listings */}
       <main>
         {posts.length === 0 && <p>No posts yet.</p>}
         <ul style={{ padding: 0, listStyle: 'none' }}>
