@@ -49,7 +49,7 @@ export default function HomePage() {
   return (
     <div style={{ maxWidth: 800, margin: '40px auto', fontFamily: 'Arial, sans-serif' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h1>My Minimal Blog</h1>
+        <h1>Blog</h1>
         <nav>
           {admin && <Link href="/write">Write</Link>}
         </nav>
